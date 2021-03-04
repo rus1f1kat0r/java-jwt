@@ -1,7 +1,8 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.lyft.android.auth0.jwt.JWTVerifier;
+import com.lyft.android.auth0.jwt.algorithms.Algorithm;
+import com.lyft.android.auth0.jwt.interfaces.DecodedJWT;
 import net.jodah.concurrentunit.Waiter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

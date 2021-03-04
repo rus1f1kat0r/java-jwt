@@ -1,6 +1,7 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.lyft.android.auth0.jwt.TokenUtils;
+import com.lyft.android.auth0.jwt.exceptions.JWTDecodeException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

@@ -1,6 +1,7 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.interfaces.Clock;
+import com.lyft.android.auth0.jwt.ClockImpl;
+import com.lyft.android.auth0.jwt.interfaces.Clock;
 import org.junit.Test;
 
 import java.util.Date;

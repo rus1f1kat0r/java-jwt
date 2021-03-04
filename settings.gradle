@@ -1,13 +1,1 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        jcenter()
-    }
-    plugins {
-        id 'com.jfrog.bintray' version '1.8.5'
-        id 'com.auth0.gradle.oss-library.java' version '0.14.0'
-    }
-}
-
-include ':java-jwt'
-project(':java-jwt').projectDir = new File(rootProject.projectDir, '/lib')
+include ':lib'

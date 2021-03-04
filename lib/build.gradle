@@ -1,66 +1,56 @@
 plugins {
-    id 'java'
-    id 'jacoco'
-    id 'com.jfrog.bintray'
-    id 'com.auth0.gradle.oss-library.java'
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
 }
 
-logger.lifecycle("Using version ${version} for ${group}.${name}")
+group = 'com.lyft.android.auth.jwt'
+version = '1.0'
 
-oss {
-    name "java jwt"
-    repository "java-jwt"
-    organization "auth0"
-    description "Java implementation of JSON Web Token (JWT)"
-    baselineCompareVersion "3.13.0"
+android {
+    compileSdkVersion 30
 
-    developers {
-        auth0 {
-            displayName = "Auth0"
-            email = "oss@auth0.com"
-        }
-        lbalmaceda {
-            displayName = "Luciano Balmaceda"
-            email = "luciano.balmaceda@auth0.com"
-        }
-        hzalaz {
-            displayName = "Hernan Zalazar"
-            email = "hernan@auth0.com"
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(8)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-}
-
-compileJava {
-    sourceCompatibility '1.8'
-    targetCompatibility '1.8'
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.0'
-    implementation 'commons-codec:commons-codec:1.14'
     testImplementation 'org.bouncycastle:bcprov-jdk15on:1.60'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     testImplementation 'net.jodah:concurrentunit:0.4.3'
     testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     testImplementation 'org.mockito:mockito-core:2.18.3'
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-}
-
-test {
-    testLogging {
-        events "skipped", "failed", "standardError"
-        exceptionFormat "short"
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+//                from components.release
+                groupId = 'com.lyft.android.auth.jwt'
+                artifactId = 'android-jwt'
+                version = '1.0'
+            }
+        }
     }
 }

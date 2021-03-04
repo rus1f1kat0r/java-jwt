@@ -1,8 +1,10 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.Clock;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.lyft.android.auth0.jwt.JWT;
+import com.lyft.android.auth0.jwt.JWTVerifier;
+import com.lyft.android.auth0.jwt.algorithms.Algorithm;
+import com.lyft.android.auth0.jwt.interfaces.Clock;
+import com.lyft.android.auth0.jwt.interfaces.DecodedJWT;
 import org.apache.commons.codec.binary.Base64;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.core.IsCollectionContaining;

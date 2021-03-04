@@ -1,9 +1,10 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.impl.NullClaim;
-import com.auth0.jwt.interfaces.Claim;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.lyft.android.auth0.jwt.JWT;
+import com.lyft.android.auth0.jwt.exceptions.JWTDecodeException;
+import com.lyft.android.auth0.jwt.impl.NullClaim;
+import com.lyft.android.auth0.jwt.interfaces.Claim;
+import com.lyft.android.auth0.jwt.interfaces.DecodedJWT;
 import org.apache.commons.codec.binary.Base64;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.core.IsCollectionContaining;

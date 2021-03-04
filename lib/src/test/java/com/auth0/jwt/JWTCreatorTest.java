@@ -1,9 +1,11 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.impl.PublicClaims;
-import com.auth0.jwt.interfaces.ECDSAKeyProvider;
-import com.auth0.jwt.interfaces.RSAKeyProvider;
+import com.lyft.android.auth0.jwt.JWTCreator;
+import com.lyft.android.auth0.jwt.TokenUtils;
+import com.lyft.android.auth0.jwt.algorithms.Algorithm;
+import com.lyft.android.auth0.jwt.impl.PublicClaims;
+import com.lyft.android.auth0.jwt.interfaces.ECDSAKeyProvider;
+import com.lyft.android.auth0.jwt.interfaces.RSAKeyProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.codec.binary.Base64;
 import org.junit.Rule;

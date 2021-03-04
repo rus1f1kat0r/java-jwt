@@ -1,12 +1,15 @@
 package com.auth0.jwt;
 
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.exceptions.AlgorithmMismatchException;
-import com.auth0.jwt.exceptions.InvalidClaimException;
-import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.auth0.jwt.interfaces.Clock;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.auth0.jwt.interfaces.Verification;
+import com.lyft.android.auth0.jwt.ClockImpl;
+import com.lyft.android.auth0.jwt.JWTCreator;
+import com.lyft.android.auth0.jwt.JWTVerifier;
+import com.lyft.android.auth0.jwt.algorithms.Algorithm;
+import com.lyft.android.auth0.jwt.exceptions.AlgorithmMismatchException;
+import com.lyft.android.auth0.jwt.exceptions.InvalidClaimException;
+import com.lyft.android.auth0.jwt.exceptions.TokenExpiredException;
+import com.lyft.android.auth0.jwt.interfaces.Clock;
+import com.lyft.android.auth0.jwt.interfaces.DecodedJWT;
+import com.lyft.android.auth0.jwt.interfaces.Verification;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
