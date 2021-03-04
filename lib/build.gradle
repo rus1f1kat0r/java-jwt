@@ -46,7 +46,7 @@ afterEvaluate {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
-//                from components.release
+                from components.release
                 groupId = 'com.lyft.android.auth.jwt'
                 artifactId = 'android-jwt'
                 version = '1.0'
